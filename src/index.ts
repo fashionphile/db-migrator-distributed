@@ -92,7 +92,7 @@ export default class DBMigrator {
     this.logger.info({}, 'Check lock table exists');
 
     const sqlQuery = `CREATE TABLE IF NOT EXISTS ${this.migrationsLockTable} (
-      acquired_at   timestamp with time zone default null
+      acquired_at   timestamp null default null
     );`;
 
     try {
